@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Squada+One&display=swap"
+        rel="stylesheet">
+    <title>drink MATE</title>
+</head>
+
+<body>
+    <header id="header">
+
+        <nav id="nav-bar" class="navbar">
+
+            <img id="header-img" src="./assets/Logo.png"" alt=" drinkMate_logo">
+
+            <span class="navbar-toggle" id="js-navbar-toggle">
+                <i class="fa fa-bars"></i>
+            </span>
+            <ul class="main-nav" id="js-menu">
+                <li>
+                    <a href="#" class="nav-link">Benefícios</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">Produtos</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">Modo de preparo</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="home-page">
+
+            <img src="./assets/home-image.png" alt="Beba chimarrão">
+
+            <h1>be happy, drink <span>MATE.</span></h1>
+            <p>Cadastre seu e-mai e receba novidades todos os dias.</p>
+
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <input name="email" id="email" type="email" placeholder="Seu e-mail" required />
+                <input id="submit" type="submit" value="CADASTRAR" class="button" />
+            </form>
+        </section>
+
+        <section class="page-products">
+            <h1>be happy, drink <span>MATE.</span></h1>
+        </section>
+
+    </main>
+
+
+</body>
+
+<script>
+    let mainNav = document.getElementById("js-menu");
+    let navBarToggle = document.getElementById("js-navbar-toggle");
+
+    navBarToggle.addEventListener("click", function () {
+        mainNav.classList.toggle("active");
+    });
+</script>
+
+</html>
