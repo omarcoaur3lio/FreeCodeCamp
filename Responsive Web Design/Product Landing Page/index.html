@@ -1,60 +1,98 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles.css">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Squada+One&display=swap"
         rel="stylesheet">
-    <title>drink MATE</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+
+
+
 </head>
 
 <body>
-    <header>
 
-        <nav>
+    <header id="header">
+        <div class="content">
 
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fa fa-bars"></i>
-            </label>
-            <img id="header-logo" src="./assets/Logo.png"" alt=" drinkMate_logo">
+            <a class="logo" href="#">
+                <img id="header-img" src="./assets/Logo.png" alt="logo grink Mate">
+            </a>
+            <div class="toggler"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div>
 
-            <ul>
-                <li><a href="#">Benefícios</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Modo de preparo</a></li>
-            </ul>
+            <nav id="nav-bar">
+                <ul>
+                    <li><a href="#benefits" class="nav-link">Benefícios</a></li>
+                    <li><a href="#products" class="nav-link">Produtos</a></li>
+                    <li><a href="#preparation" class="nav-link">Modo de usar</a></li>
 
-        </nav>
+                </ul>
+
+            </nav>
+
+        </div>
     </header>
 
-    <main>
+    <section id="home-page" class="home-container">
+        <div class="content-form">
 
-        <section class="home-page">
-    
-            <img src="./assets/home-image.png" alt="Beba chimarrão">
-    
-            <h1>be happy, drink <span>MATE.</span></h1>
-            <p>Cadastre seu e-mai e receba novidades todos os dias.</p>
-    
-            <form id="form" action="https://www.freecodecamp.com/email-submit">
-                <input name="email" id="email" type="email" placeholder="Seu e-mail" required />
-                <input id="submit" type="submit" value="CADASTRAR" class="button" />
-            </form>
-        </section>
-    
-        <section class="page-products">
-            <h1>be happy, drink <span>MATE.</span></h1>
-        </section>
-    
-    </main>
+            <div id="form-content">
+                <h1>be happy, drinks <span>MATE.</span></h1>
+                <p>Cadastre seu e-mail e receba novidades todos os dias.</p>
+                <form>
+                    <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+                    <input class="button-primary-blue" type="button" value="CADASTRAR">
+                </form>
+            </div>
+
+        </div>
+
+        <div class="content-img">
+
+            <div id="img">
+                <img src="./assets/home-image.png" alt="drink Mate">
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="benefits">
+
+        <video playsinline autoplay muted loop poster id="myVideo">
+            <source src="./assets/bg-video.mp4" type="video/mp4">
+        </video>
+        <div class="layer-gradient">
+            <div class="benefits-content">
+                <h1>Benefícios</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae velit sint tenetur commodi sunt facilis autem. Sunt inventore expedita odit accusamus nam mollitia sed facere sapiente dolores? Consequuntur, reiciendis quisquam.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="products">
+
+    </section>
+
+    <section id="preparation">
+
+    </section>
 
 </body>
+<script>
+    $(function () {
+        $('.toggler').on('click', function () {
+            $('nav').slideToggle(500);
+        });
+    });
+
+</script>
 
 </html>
