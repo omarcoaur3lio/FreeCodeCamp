@@ -1,3 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
 :root {
     --white: #FEFEFE;
     --grey-100: #EBEBEB;
@@ -7,24 +15,10 @@
     --blue-highlight: #49ACFD;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    text-decoration: none;
-}
-
 html, input {
     font-family: 'Open Sans', sans-serif;
     font-size: 87.5%;
     /* 14px em média */
-}
-
-html, body #root {
-    /* Altura da tela sempre ocupará 100% do espaço */
-    height: 100vh;
 }
 
 body, input, button, textarea {
@@ -94,75 +88,53 @@ nav ul li a:hover {
     color: var(--green-dark);
 }
 
-.home-container {
-    background-color: var(--grey-100);
+/* END NAVIGATION */
+
+.home-page {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    min-height: 800px;
+    padding: 2%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "up-right" "down-left";
+    grid-template-areas: "down-right" "up-left";
 }
 
-.content-form {
-    grid-area: down-left;
+.content-home {
+    grid-area: up-left;
+}
+
+.text-content {
     width: 100%;
-    padding: 0 5% 5% 5%;
+    padding: 0 10%;
 }
 
-#form-content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 16px;
-}
-
-#form-content form {
-    display: flex;
-    flex-direction: column;
-}
-
-.content-img {
-    grid-area: up-right;
-    /* background-color: rgb(235, 113, 92); */
-    width: 100%;
-}
-
-.content-img #img {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.content-img #img img {
-    margin-top: 70px;
-    width: 380px;
-}
-
-.content-form h1 {
+.text-content h1 {
     font-size: 5rem;
-    max-width: 400px;
+    min-width: 350px;
+    max-width: 350px;
 }
 
-.content-form h1 span {
+.text-content h1 span {
     color: transparent;
     -webkit-text-stroke: 3px var(--grey-300);
 }
 
-.content-form p {
-    font-size: 1.5rem;
-    max-width: 250px;
+.text-content p {
+    font-size: 1.2rem;
+    max-width: 350px;
     margin-top: 2rem;
-    margin-bottom: 1rem;
 }
 
-.content-form form input:first-child {
+.home-page form {
+    margin: 1rem 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-page form input:first-child {
     height: 40px;
-    background-color: var(--grey-100);
     border: 2px solid var(--grey-300);
     border-radius: 4px;
     margin-bottom: 0.5rem;
@@ -178,6 +150,8 @@ nav ul li a:hover {
     background-color: transparent;
     font-size: 1.4rem;
     transition: 0.3s;
+    width: 100%;
+    cursor: pointer;
 }
 
 .button-primary-blue:hover {
@@ -189,10 +163,27 @@ nav ul li a:hover {
     opacity: 0.8;
 }
 
-#benefits {
+.home-img {
+    grid-area: down-right;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.home-img img {
+    width: 60%;
+    max-width: 300px;
+}
+
+.benefits-page {
     width: 100%;
     height: 100vh;
-    background-color: rgb(35, 92, 167);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 700px;
 }
 
 #myVideo {
@@ -204,49 +195,164 @@ nav ul li a:hover {
 
 .layer-gradient {
     position: absolute;
-    float: left;
     width: 100%;
     height: 100vh;
-    background: #4ab985d8;
-
+    background-color: #1c8d718a;
+    float: left;
+    padding: 20% 0;
     display: flex;
-    align-items: center;
-    
+    flex-direction: column;
+    justify-content: center;
 }
 
 .benefits-content {
-    background-color: #000000be;
-    padding: 50px 20px 120px;
-    width: 80%;
+    margin-right: 20%;
+    border-radius: 0 0.5rem 0.5rem 0;
+    position: absolute;
+    float: left;
+    color: #EBEBEB;
+    background-color: #0c0c0cb9;
+    padding: 2rem;
+    overflow: hidden;
 }
 
-.benefits-content h1 {
-    font-size: 3rem;
-    color: var(--white);
-    margin-bottom: 2rem;
+.benefits-content h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--grey-100);
 }
 
 .benefits-content p {
-    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.products-page {
+    width: 100%;
+    height: 100%;
+    background-color: var(--grey-100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modo-preparo h2, .products-page h2 {
+    font-size: 2.5rem;
+    color: var(--grey-300);
+    margin-top: 6rem;
+}
+
+.modo-preparo>p, .products-page>p {
+    color: var(--grey-300);
+    max-width: 250px;
+    text-align: center;
+    margin-top: 0.8rem;
+}
+
+.product-cards {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card {
+    width: 220px;
+    height: 300px;
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: 0.3s;
+    box-shadow: 15px 15px 20px -6px rgba(0, 0, 0, 0.1);
+}
+
+.card>img {
+    width: 50px;
+}
+
+.card .product-name {
+    font-size: 1rem;
+}
+
+.card>p {
+    font-size: 0.8rem;
+    text-align: center;
+    color: #798086;
+}
+
+.card .product-value {
+    font-weight: 700;
+}
+
+.primary-button {
+    font-family: 'Squada One', sans-serif;
+    border: 2px solid var(--grey-300);
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background-color: var(--grey-300);
     color: var(--white);
-    line-height: 2rem;
-    max-width: 90%;
 }
 
-
-
-
-
-#products {
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(70, 35, 167);
+.card:hover {
+    background-color: var(--white);
 }
 
-#preparation {
+.primary-button:active {
+    border-color: var(--green-dark);
+    background-color: var(--green-dark);
+}
+
+.btn-all-products {
+    width: 220px;
+    margin: 4rem;
+}
+
+.modo-preparo {
     width: 100%;
-    height: 100vh;
-    background-color: rgb(167, 35, 116);
+    height: 100%;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards-dicas {
+    width: 90%;
+    height: 90%;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    padding: 2%;
+}
+
+.tip-card {
+    width: 100%;
+    height: 100%;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 15px 15px 20px -6px rgba(0, 0, 0, 0.1);
+}
+
+.tip-card>img {
+    height: 45%;
+}
+
+.tip-card>p {
+    max-width: 200px;
+    text-align: center;
 }
 
 @media (min-width: 720px) {
@@ -289,41 +395,59 @@ nav ul li a:hover {
     .side-nav {
         float: right;
     }
-    .home-container {
-        height: 100vh;
+    .home-page {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-        grid-template-areas: "down-left up-right ";
+        grid-template-areas: "up-left down-right";
     }
-    .content-form {
-        grid-area: down-left;
-    }
-    .content-img {
-        grid-area: up-right;
-    }
-    .content-form {
-        padding: 0;
-    }
-    #form-content {
-        padding-left: 20%;
-    }
-    #form-content form {
+    .content-home {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .text-content h1 {
+        font-size: 6rem;
+        min-width: 450px;
+        max-width: 550px;
+    }
+    .home-page form {
         flex-direction: row;
     }
-    .content-form h1 {
-        min-width: 400px;
-    }
-    .content-form form input:first-child {
-        width: 350px;
+    .content-home form input:first-child {
+        width: 40%;
+        min-width: 200px;
         margin-right: 1rem;
     }
     .button-primary-blue {
         font-size: 1.2rem;
-        width: 180px;
+        width: 20%;
+        min-width: 150px;
     }
-    .content-img #img img {
-        min-width: 200px;
+    .home-img {
+        padding-top: 0px;
+    }
+    .home-img img {
+        min-width: 250px;
         width: 70%;
+        max-width: none;
+    }
+    .benefits-page {
+        justify-content: left;
+    }
+    .benefits-content {
+        max-width: 500px;
+        margin-right: 0;
+    }
+    .product-cards {
+        flex-direction: row;
+        margin-top: 4rem;
+    }
+    .card {
+        height: 350px;
+    }
+    .cards-dicas {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "card1 card2 card3" "card4  card5";
     }
 }

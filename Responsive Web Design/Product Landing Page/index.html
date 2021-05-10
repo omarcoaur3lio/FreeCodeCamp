@@ -4,32 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Squada+One&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Document</title>
-
-
-
+    <title>drink Mate</title>
 </head>
 
 <body>
-
     <header id="header">
         <div class="content">
 
-            <a class="logo" href="#">
+            <a class="logo" href="#home-page">
                 <img id="header-img" src="./assets/Logo.png" alt="logo grink Mate">
             </a>
             <div class="toggler"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div>
 
             <nav id="nav-bar">
                 <ul>
-                    <li><a href="#benefits" class="nav-link">Benefícios</a></li>
-                    <li><a href="#products" class="nav-link">Produtos</a></li>
-                    <li><a href="#preparation" class="nav-link">Modo de usar</a></li>
+                    <li><a href="#benefits-page" class="nav-link">Benefícios</a></li>
+                    <li><a href="#products-page" class="nav-link">Produtos</a></li>
+                    <li><a href="#preparation" class="nav-link">Modo de preparo</a></li>
 
                 </ul>
 
@@ -38,52 +35,106 @@
         </div>
     </header>
 
-    <section id="home-page" class="home-container">
-        <div class="content-form">
+    <section id="home-page" class="home-page">
+        <div class="content-home">
 
-            <div id="form-content">
+            <div class="text-content">
                 <h1>be happy, drinks <span>MATE.</span></h1>
                 <p>Cadastre seu e-mail e receba novidades todos os dias.</p>
-                <form>
-                    <input type="email" name="email" id="email" placeholder="Digite seu email" required>
-                    <input class="button-primary-blue" type="button" value="CADASTRAR">
-                </form>
             </div>
+            <form>
+                <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+                <input class="button-primary-blue" type="button" value="CADASTRAR">
+            </form>
 
         </div>
 
-        <div class="content-img">
-
-            <div id="img">
-                <img src="./assets/home-image.png" alt="drink Mate">
-            </div>
-
+        <div class="home-img">
+            <img src="./assets/home-image.png" alt="drink Mate">
         </div>
 
     </section>
 
-    <section id="benefits">
+    <section id="benefits-page" class="benefits-page">
 
         <video playsinline autoplay muted loop poster id="myVideo">
             <source src="./assets/bg-video.mp4" type="video/mp4">
         </video>
-        <div class="layer-gradient">
-            <div class="benefits-content">
-                <h1>Benefícios</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae velit sint tenetur commodi sunt facilis autem. Sunt inventore expedita odit accusamus nam mollitia sed facere sapiente dolores? Consequuntur, reiciendis quisquam.</p>
-            </div>
 
+        <div class="layer-gradient">
+        </div>
+        <div class="benefits-content">
+            <h2>Benefícios</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dolorum amet velit architecto iusto
+                vitae officia maxime debitis minima doloribus nisi obcaecati, sapiente ea similique provident quas
+                delectus fugit. Ratione?</p>
         </div>
 
     </section>
 
-    <section id="products">
+    <section id="products-page" class="products-page">
+        <h2>Produtos em destaque</h2>
+        <p>Separamos alguns produtos que podem ser de seu interesse.</p>
+        <div class="product-cards">
+
+            <div class="card">
+                <img src="./assets/erva.svg" alt="erva-mate">
+                <span class="product-value">R$ 25,00</span>
+                <span class="product-name">Erva Mate | 1 Kg</span>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut risus tellus
+                    interdum.</p>
+                <button class="primary-button">COMPRAR</button>
+            </div>
+
+            <div class="card">
+                <img src="./assets/bottle.svg" alt="garrafa-termica">
+                <span class="product-value">R$ 250,00</span>
+                <span class="product-name">Garrafa Térmica | 1 L</span>
+                <p class="description">Lorem ipsum dolor sit amet.</p>
+                <button class="primary-button">COMPRAR</button>
+            </div>
+
+            <div class="card">
+                <img src="./assets/cuia.svg" alt="cuia">
+                <span class="product-value">R$ 80,00</span>
+                <span class="product-name">Cuia Uruguaia</span>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <button class="primary-button">COMPRAR</button>
+            </div>
+
+        </div>
+        <button class="button-primary-blue btn-all-products">TODOS OS PRODUTOS</button>
 
     </section>
 
-    <section id="preparation">
-
+    <section id="preparation" class="modo-preparo">
+        <h2>Mode de preparo</h2>
+        <p>Seguindo essas dicas, é possível fazer um ótimo chimarrão.</p>
+        <div class="cards-dicas">
+            <div class="tip-card">
+                <img src="./assets/step1.svg" alt="step one">
+                <p>Coloque 2/3 de erva-mate
+                    em uma cuia.</p>
+            </div>
+            <div class="tip-card">
+                <img src="./assets/step2.svg" alt="step one">
+                <p>Gire a cuia em aproximadamente 180º.</p>
+            </div>
+            <div class="tip-card">
+                <img src="./assets/step3.svg" alt="step one">
+                <p>Posicione a erva-mate em uma das laterias.</p>
+            </div>
+            <div class="tip-card">
+                <img src="./assets/step4.svg" alt="step one">
+                <p>Ajeite a erva-mate com a bomba deixando um espaço para a água.</p>
+            </div>
+            <div class="tip-card">
+                <img src="./assets/step5.svg" alt="step one">
+                <p>Coloque água quente e aproveite seu chimarrão .</p>
+            </div>
+        </div>
     </section>
+
 
 </body>
 <script>
