@@ -18,6 +18,7 @@
 html, input {
     font-family: 'Open Sans', sans-serif;
     font-size: 87.5%;
+    scroll-behavior: smooth;
     /* 14px em média */
 }
 
@@ -197,7 +198,7 @@ nav ul li a:hover {
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: #1c8d718a;
+    background-color: #000000c4;
     float: left;
     padding: 20% 0;
     display: flex;
@@ -211,7 +212,7 @@ nav ul li a:hover {
     position: absolute;
     float: left;
     color: #EBEBEB;
-    background-color: #0c0c0cb9;
+    background-color:#77b255c9;
     padding: 2rem;
     overflow: hidden;
 }
@@ -235,13 +236,15 @@ nav ul li a:hover {
     align-items: center;
 }
 
-.modo-preparo h2, .products-page h2 {
+.preparation-mode h2, 
+.products-page h2 {
     font-size: 2.5rem;
     color: var(--grey-300);
     margin-top: 6rem;
 }
 
-.modo-preparo>p, .products-page>p {
+.preparation-mode>p, 
+.products-page>p {
     color: var(--grey-300);
     max-width: 250px;
     text-align: center;
@@ -260,7 +263,7 @@ nav ul li a:hover {
     height: 300px;
     border: 1px solid var(--white);
     border-radius: 8px;
-    padding: 32px 16px;
+    padding: 16px 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -269,8 +272,20 @@ nav ul li a:hover {
     box-shadow: 15px 15px 20px -6px rgba(0, 0, 0, 0.1);
 }
 
-.card>img {
-    width: 50px;
+.hvr-float:hover, .hvr-float:focus, .hvr-float:active {
+    -webkit-transform: translateY(-16px);
+    transform: translateY(-16px);
+  }
+
+.container-img {
+    width: 100%;
+    height: 80px;
+    padding: 1rem;
+}
+
+.card .container-img>img {
+    width: 100%;
+    height: 100%;
 }
 
 .card .product-name {
@@ -315,7 +330,7 @@ nav ul li a:hover {
     margin: 4rem;
 }
 
-.modo-preparo {
+.preparation-mode {
     width: 100%;
     height: 100%;
     background-color: var(--white);
@@ -324,7 +339,7 @@ nav ul li a:hover {
     align-items: center;
 }
 
-.cards-dicas {
+.cards-tips {
     width: 90%;
     height: 90%;
     margin-top: 2rem;
@@ -343,7 +358,11 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    box-shadow: 15px 15px 20px -6px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 15px 15px 20px -6px rgba(0, 0, 0, 0.1); */
+    border-radius: 8px;
+    background: #fefefe;
+    box-shadow:  20px 20px 60px #d8d8d8,
+                 -20px -20px 60px #ffffff;
 }
 
 .tip-card>img {
@@ -444,10 +463,32 @@ nav ul li a:hover {
     }
     .card {
         height: 350px;
+
     }
-    .cards-dicas {
-        grid-template-columns: repeat(3, 1fr);
+
+    .cards-tips {
+        grid-template-columns: 1.83fr 1fr 1fr 1.83fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: "card1 card2 card3" "card4  card5";
+        grid-template-areas: 
+        "card1 card2 card2 card3"
+        "card4 card4 card5 card5";
+        gap: 3%;
     }
+
+    #card-one {
+        grid-area: card1;
+    }
+    #card-two {
+        grid-area: card2;
+    }
+    #card-tree {
+        grid-area: card3;
+    }
+    #card-four {
+        grid-area: card4;
+    }
+    #card-five {
+        grid-area: card5;
+    }
+
 }
