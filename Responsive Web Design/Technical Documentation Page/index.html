@@ -15,11 +15,13 @@
 
     <script>
         $(document).ready(function () {
+
+            
+
             function toggleSidebar() {
                 $(".button").toggleClass("active");
                 $("main").toggleClass("move-to-left");
                 $(".sidebar-item").toggleClass("active");
-
             }
             $(".button").on("click tap", function () {
                 toggleSidebar();
@@ -32,13 +34,8 @@
 
             $(window).on('resize', function () {
                 var win = $(this);
-                if (win.width() > 800) {
-                    $("main").addClass("move-to-left");
-                }
-                else {
-                    $("main").removeClass("move-to-left");
-                }
-            })
+                win.width() > 800 ?  $("main").addClass("move-to-left") : $("main").removeClass("move-to-left")
+            });
 
         });
 

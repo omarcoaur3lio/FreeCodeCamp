@@ -267,5 +267,12 @@ nav {
 @media (min-width: 480px) {}
 
 @media (min-width: 768px) {
+  main {
+    -webkit-transform: translateX(350px);
+    -moz-transform: translateX(350px);
+    -ms-transform: translateX(350px);
+    -o-transform: translateX(350px);
+    transform: translateX(350px);
+  }
 
 }
