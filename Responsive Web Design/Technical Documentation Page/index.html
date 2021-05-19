@@ -20,35 +20,25 @@
 
             function toggleSidebar() {
                 $(".button").toggleClass("active");
-                $("main").toggleClass("move-to-left");
+                $("main").toggleClass("move-to-right");
                 $(".sidebar-item").toggleClass("active");
             }
+
             $(".button").on("click tap", function () {
                 toggleSidebar();
             });
+            
             $(document).keyup(function (e) {
                 if (e.keyCode === 27) {
                     toggleSidebar();
                 }
             });
-
-            $(window).on('resize', function () {
-                var win = $(this);
-                win.width() > 800 ?  $("main").addClass("move-to-left") : $("main").removeClass("move-to-left")
-            });
-
         });
 
     </script>
 </head>
 
 <body>
-    <!-- <nav>
-        <div id="img"></div>
-        <div id="list"></div>
-    </nav>
-    <main></main> -->
-
 
     <div class="nav-right visible-xs">
         <div class="button" id="btn">
@@ -57,7 +47,7 @@
             <div class="bar bottom"></div>
         </div>
     </div>
-    <!-- nav-right -->
+    <!-- nav-left -->
     <main>
 
         <nav>
@@ -68,10 +58,10 @@
                     <div class="bar bottom"></div>
                 </div>
             </div>
-            <!-- nav-right -->
+            <!-- nav-left -->
         </nav>
 
-        <div id="teta"></div>
+    
 
 
     </main>

@@ -42,6 +42,7 @@ body, html {
 
 main {
   z-index: 2;
+  height: 100vh;
   position: relative;
   background-color: #2D3142;
   -webkit-transition: transform .7s ease-in-out;
@@ -49,13 +50,6 @@ main {
   -ms-transition: transform .7s ease-in-out;
   -o-transition: transform .7s ease-in-out;
   transition: transform .7s ease-in-out;
-}
-
-#teta {
-  width: 400px;
-  height: 4000px;
-  background-color: #FFF;
-  margin-left: 150px;
 }
 
 .sidebar {
@@ -144,7 +138,7 @@ main {
   width: 0;
 }
 
-.move-to-left {
+.move-to-right {
   -webkit-transform: translateX(350px);
   -moz-transform: translateX(350px);
   -ms-transform: translateX(350px);
@@ -264,9 +258,8 @@ nav {
   transition: all 1s ease;
 }
 
-@media (min-width: 480px) {}
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   main {
     -webkit-transform: translateX(350px);
     -moz-transform: translateX(350px);
@@ -274,5 +267,10 @@ nav {
     -o-transform: translateX(350px);
     transform: translateX(350px);
   }
+  .button {
+    display: none;
+    
+  }
+
 
 }
