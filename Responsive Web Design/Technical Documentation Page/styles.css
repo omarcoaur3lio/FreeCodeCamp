@@ -100,7 +100,7 @@ main {
   z-index: 2;
   height: 100vh;
   position: relative;
-  background-color: #2D3142;
+  background-color: var(--white);
   -webkit-transition: transform .7s ease-in-out;
   -moz-transition: transform .7s ease-in-out;
   -ms-transition: transform .7s ease-in-out;
@@ -171,7 +171,7 @@ main {
   -moz-transition: all .7s ease;
   -ms-transition: all .7s ease;
   -o-transition: all .7s ease;
-  transition: all .7s ease;
+  transition: all .5s ease;
 }
 
 .button.active .top {
@@ -202,9 +202,6 @@ main {
   transform: translateX(370px);
 }
 
-nav {
-  padding-top: 30px;
-}
 
 .sidebar-list {
   padding: 0;
@@ -249,6 +246,20 @@ nav {
   color: inherit;
 }
 
+nav {
+  padding-top: 30px;
+}
+
+.main-section {
+  position: absoute;
+  margin-top: 4.7rem;
+  padding: 0 5rem;
+}
+
+.header-title {
+  font-size: 3.45rem;
+  margin-bottom: 2.3rem;
+}
 
 @media (min-width: 800px) {
   html, body, input {
