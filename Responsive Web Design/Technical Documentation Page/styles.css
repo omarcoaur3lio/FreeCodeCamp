@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  list-style: none;
+  /* list-style: none; */
 }
 
 :root {
@@ -19,7 +19,7 @@
 
 html, body, input {
   font-family: 'Inter', sans-serif;
-  font-size: 87.5%; /* 14px em média */
+  font-size: 14px; 
   font-weight: 400;
   scroll-behavior: smooth;
   
@@ -261,6 +261,35 @@ nav {
   margin-bottom: 2.3rem;
 }
 
+.main-section p {
+  line-height: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.main-section h3 {
+  font-size: 1.6rem;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.code-inline {
+  background-color: var(--grey-200);
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #4971FD;
+  font-family: Hack, monospace;
+  font-size: .8rem;
+}
+
+.main-section ul{
+  margin: 16px;
+  margin-left: 2.3rem;
+}
+.main-section ul li{
+  margin-top: 8px;
+}
+
+
 @media (min-width: 800px) {
   html, body, input {
     font-size: 100%;
@@ -275,7 +304,11 @@ nav {
   }
   .button {
     display: none;
-    
+  }
+
+  .main-section p {
+    margin-right: 350px; 
+    max-width: 1000px;
   }
 
 
