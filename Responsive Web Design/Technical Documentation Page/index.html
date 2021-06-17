@@ -11,19 +11,14 @@
     <link rel="stylesheet" href="styles.css">
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> 
     <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
-
-
-
     <script>
         $(document).ready(function () {
-
-            
 
             function toggleSidebar() {
                 $(".button").toggleClass("active");
@@ -42,7 +37,16 @@
             });
         });
 
+        $(document).on('click', 'a[href^="#"]', function (event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+        });
+        
     </script>
+    
 </head>
 
 <body>
@@ -70,16 +74,16 @@
         <input id="search-input" type="text" placeholder="&#xF002;   Pesquise por algo...">
         
         <ul class="sidebar-list">
-
             <header class="item-header">
                 <i class="fa fa-bookmark-o"></i>
                 <h3>INTRODUÇÃO</h3>
             </header>
+
             <li class="nav-link">
                 <a href="#ESP-IDF" class="sidebar-anchor">ESP-IDF</a>
             </li>
             <li class="nav-link">
-                <a href="#ESP-IDF" class="sidebar-anchor">Material necessário</a>
+                <a href="#ESP-IDF_Material_necessário" class="sidebar-anchor">Material necessário</a>
             </li>
             
             <header class="item-header">
@@ -98,16 +102,16 @@
                 <a href="#Instalação" class="sidebar-anchor">Instalação manual</a>
             </li>
             <li class="nav-link">
-                <a href="#Instalação" class="sidebar-anchor">Instalação das dependências</a>
+                <a href="#Instalação_das_dependências" class="sidebar-anchor">Instalação das dependências</a>
             </li>
             <li class="nav-link">
-                <a href="#Instalação" class="sidebar-anchor">Obtendo o IDF</a>
+                <a href="#Obtendo_o_ESP-IDF" class="sidebar-anchor">Obtendo o IDF</a>
             </li>
             <li class="nav-link">
-                <a href="#Instalação" class="sidebar-anchor">Configurando as ferramentas</a>
+                <a href="#Configurando_as_ferramentas" class="sidebar-anchor">Configurando as ferramentas</a>
             </li>
             <li class="nav-link">
-                <a href="#Instalação" class="sidebar-anchor">Variáveis de ambiente</a>
+                <a href="#Variáveis_de_ambiente" class="sidebar-anchor">Variáveis de ambiente</a>
             </li>     
             
             <header class="item-header">
@@ -115,13 +119,13 @@
                 <h3>HELLO WORLD</h3>
             </header>
             <li class="nav-link">
-                <a href="#Hello_World!" class="sidebar-anchor">Configuração do projeto</a>
+                <a href="#Hello_World" class="sidebar-anchor">Configuração do projeto</a>
             </li>
             <li class="nav-link">
-                <a href="#Hello_World!" class="sidebar-anchor">Build do projeto</a>
+                <a href="#build_projeto" class="sidebar-anchor">Build do projeto</a>
             </li>
             <li class="nav-link">
-                <a href="#Hello_World!" class="sidebar-anchor">Gravação no ESP</a>
+                <a href="#Grave_o_projeto" class="sidebar-anchor">Gravação no ESP</a>
             </li>
             
             <header class="item-header" id="dummy">
@@ -155,15 +159,13 @@
             <p>ESP-IDF <code class="code-inline">Espressif IoT Development Framework</code> é um conjunto de programas, compiladores e bibliotecas para o desenvolvimento de aplicações voltadas à internet das coisas.</p>
             <p>O framework foi criado pela empresa ESPRESSIF, e esta sendo continuamente melhorado e aumentado, com inúmeros exemplos de aplicações, aproveitando praticamente todos os recursos de hardware e software do ESP32. A linguagem usada como base é a linguagem C.</p>
 
-            <h3>Material necessário</h3>
+            <h3 id="ESP-IDF_Material_necessário">Material necessário</h3>
             <p>Para tirar o máxmo de proveito dessa documentação e já inicializar os primeiros projetos com um ESP32, é sugerido o seguinte material:</p>
             <ul>
                 <li>Uma placa ESP32</li>
                 <li>Um cabo USB - USB A / micro USB B</li>
                 <li>Um computador rodando Linux, MacOS ou Windows</li>
             </ul>
-
-            
         </section>
 
         <section id="Getting_Started" class="main-section">
@@ -193,7 +195,7 @@
             </div>
             
             <p>A instalação via VSCode é frequentemente mais facilitada que a instalação manual, isso porque são utilizados scripts que automatizam o processo de instalação das demais ferramentas utilizadas pelo framework.</p>
-            <h3>Instalação manual</h3>
+            <h3 id="Instalação">Instalação manual</h3>
             <p>Escolha abaixo para qual plataforma deseja realizar a instalação do framework.</p>
             
             <div class="button-group-select-instalation">
@@ -202,13 +204,144 @@
                 <button>Windows</button>
             </div>
             
-            <h3>Instalação das dependências</h3>
+            <h3 id="Instalação_das_dependências">Instalação das dependências</h3>
             <p>Para compilar com ESP-IDF, você precisa obter os seguintes pacotes. O comando a ser executado depende de qual distribuição do Linux você está usando:</p>
+            
+            <h4>Sistemas de base Debian (Ubuntu, mint, etc..)</h4>
+            <div class="code-area">
+                <code class="code-command">
+                    sudo apt-get install git wget flex bison gperf python3 python3-pip python3-setuptools cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
+                </code>
+            </div>
+            
+            <h4>Arch Linux</h4>
+            <div class="code-area">
+                <code class="code-command">
+                    sudo pacman -S --needed gcc git make flex bison gperf python-pip cmake ninja ccache dfu-util libusb
+                </code>
+            </div>
+            
+            <h3 id="Obtendo_o_ESP-IDF">Obtendo o ESP-IDF</h3>
+            <p>Para desenvolver aplicativos para o ESP32, você precisa das bibliotecas de software fornecidas pelo Espressif no repositório ESP-IDF.  Para obter ESP-IDF, navegue até o diretório de instalação desejado e clone o repositório.</p>
+            <div class="code-area">
+                <code class="code-command">
+                    mkdir -p ~/esp
+                </code>
+                <code class="code-command">
+                    cd ~/esp
+                </code>
+                <code class="code-command">
+                    git clone --recursive https://github.com/espressif/esp-idf.git
+                </code>
+            </div>
+
+            <h3 id="Configurando_as_ferramentas">Configurando as ferramentas</h3>
+            <p>Além do ESP-IDF, você também precisa instalar as ferramentas usadas pelo ESP-IDF, como compilador, depurador, pacotes Python, etc.</p>
+            <div class="code-area">
+                <code class="code-command">
+                    cd ~/esp/esp-idf
+                </code>
+                <code class="code-command">
+                    ./install.sh
+                </code>
+            </div>
+
+            <h3 id="Variáveis_de_ambiente">Configure as variáveis ​​de ambiente</h3>
+            <p>As ferramentas instaladas ainda não foram adicionadas à variável de ambiente PATH. Para tornar as ferramentas utilizáveis ​​na linha de comando, algumas variáveis ​​de ambiente devem ser definidas. ESP-IDF fornece outro script que faz isso.</p>
+            <div class="code-area">
+                <code class="code-command">
+                    . $HOME/esp/esp-idf/export.sh
+                </code>
+            </div>
+
         </section>
 
+        <section id="Hello_World" class="main-section">
+            <header>
+                <h2 class="header-title">Hello World</h2>
+            </header>
+            <p>Agora você está pronto para preparar seu aplicativo para ESP32. Você pode começar com o projeto “hello_world” do diretório de exemplos no IDF.</p>
+            <div class="code-area">
+                <code class="code-command">
+                    cd ~/esp
+                </code>
+                <code class="code-command">
+                    cp -r $IDF_PATH/examples/get-started/hello_world .
+                </code>
+            </div>
+
+            <h3 id="Hello_World!">Configure o projeto</h3>
+            <div class="code-area">
+                <code class="code-command">
+                    cd ~/esp/hello_world
+                </code>
+                <code class="code-command">
+                    idf.py set-target esp32
+                </code>
+                <code class="code-command">
+                    idf.py menuconfig
+                </code>
+            </div>
+
+            <h3 id="build_projeto">Gere uma build do projeto</h3>
+            <div class="code-area">
+                <code class="code-command">
+                    idf.py build
+                </code>
+            </div>
+
+            <h3 id="Grave_o_projeto">Grave o projeto no ESP</h3>
+            <div class="code-area">
+                <code class="code-command">
+                    idf.py -p PORT [-b BAUD] flash
+                </code>
+            </div>
+            <p>Onde:</p>
+            <ul>
+                <li><code class="code-inline">PORT</code>: é o endereço da entrada USB onde o ESP está conectado. (algo como <code class="code-inline">/dev/ttyUSB0</code>).</li>
+                <li><code class="code-inline">-b BAUD</code>: É um parâmetro opcional. Indicará qual baud rate deve ser utilizado durante a gravação.</li>
+            </ul>
+
+        </section>
+
+        <section id="Arduino_como_um_componente" class="main-section">
+            <header>
+                <h1 class="header-title">Arduino como um componente</h1>
+            </header>
+            <p>É possível também utlizar o core do Arduino como um componente para o ESP-IDF. Esse método possibilita a utilização da bibliotecas do Arduino diretamente no código IDF.</p>
+            <p>Para preparar o projeto basta seguir os passos abaixo:</p>
+            <ul>
+                <li>Baixe e instale o esp-idf</li>
+                <li>Crie um projeto IDF em branco (a partir de um dos exemplos)</li>
+                <li>Na pasta do projeto, crie uma pasta chamada components e clone o repositório esp32-arduino-lib-builder</li>
+            </ul>
+            <div class="code-area">
+                <code class="code-command">
+                    mkdir -p components
+                </code>
+                <code class="code-command">
+                    cd components
+                </code>
+                <code class="code-command">
+                    git clone https://github.com/espressif/arduino-esp32.git arduino 
+                </code>
+                <code class="code-command">
+                    cd arduino
+                </code>
+                <code class="code-command">
+                    git submodule update --init --recursive 
+                </code>
+                <code class="code-command">
+                    cd ../..
+                </code>
+                <code class="code-command">
+                    make menuconfig
+                </code>
+            </div>
+            <p>Para mais informações, acesse o <a href="https://github.com/espressif/arduino-esp32/blob/master/docs/esp-idf_component.md" target="_blank">repositório do projeto</a>.</p>
+        </section>
 
     </main>
-
 
 </body>
 
