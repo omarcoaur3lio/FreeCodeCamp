@@ -36,6 +36,11 @@ body, input, button, textarea {
   color: var(--dark);
 }
 
+button {
+  font: 600 1rem Inter;
+  cursor: pointer;
+}
+
 
 h1, h2 {
   font-weight: 700;
@@ -98,7 +103,7 @@ h3, h4, h5, h6 {
 
 main {
   z-index: 2;
-  height: 100vh;
+  
   position: relative;
   background-color: var(--white);
   -webkit-transition: transform .7s ease-in-out;
@@ -115,7 +120,8 @@ main {
   top: 0;
   z-index: 1;
   left: 0;
-  background-color: var(--grey-100);
+  overflow:auto;
+
 }
 
 .bar {
@@ -130,6 +136,7 @@ main {
 .button {
   cursor: pointer;
   display: inline-block;
+  padding: 5px;
   width: auto;
   margin: 0 auto;
   -webkit-transition: all .7s ease;
@@ -141,7 +148,7 @@ main {
 
 .nav-right {
   position: fixed;
-  left: 40px;
+  left: 20px;
   top: 20px;
 }
 
@@ -166,13 +173,19 @@ main {
 }
 
 .nav-right.visible-xs .active .bar {
-  background-color: var(--dark);
+  background-color: #EF8354;
   -webkit-transition: all .7s ease;
   -moz-transition: all .7s ease;
   -ms-transition: all .7s ease;
   -o-transition: all .7s ease;
   transition: all .5s ease;
 }
+
+.button.active:hover {
+  border-radius: 50%;
+  background-color:  var(--grey-300);
+
+} 
 
 .button.active .top {
   -webkit-transform: translateY(8px) rotateZ(45deg);
@@ -201,7 +214,6 @@ main {
   -o-transform: translateX(370px);
   transform: translateX(370px);
 }
-
 
 .sidebar-list {
   padding: 0;
@@ -289,6 +301,48 @@ nav {
   margin-top: 8px;
 }
 
+.button-group {
+  /* background-color: #48BB78; */
+  margin-left: 1rem;
+  padding: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.button-group button {
+  background-color: var(--white);
+  border: 2px solid var(--dark);
+  border-radius: 8px;
+  width: 200px;
+  height: 50px;
+  margin-left: 1.5rem;
+  transition: .3s;
+}
+.button-group button:hover {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+.button-group-select-instalation {
+  display: flex;
+  padding: 1.5rem 0;
+}
+
+.button-group-select-instalation button {
+  margin-left: 1.5rem;
+  width: 250px;
+  height: 32px;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--grey-300);
+}
+
+.button-group-select-instalation button:hover {
+  background-color: var(--dark);
+  color: var(--white);
+}
 
 @media (min-width: 800px) {
   html, body, input {
@@ -302,6 +356,7 @@ nav {
     -o-transform: translateX(370px);
     transform: translateX(370px);
   }
+
   .button {
     display: none;
   }
@@ -309,6 +364,15 @@ nav {
   .main-section p {
     margin-right: 350px; 
     max-width: 1000px;
+  }
+  
+  .button-group {
+    justify-content: flex-start;
+    margin-left: 10%;
+  }
+
+  .button-group button {
+    margin-left:2.5rem;
   }
 
 
