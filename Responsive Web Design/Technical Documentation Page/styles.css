@@ -340,7 +340,9 @@ nav {
   border-radius: 4px;
   border: none;
   background-color: var(--grey-300);
+  transition: .3s;
 }
+
 
 .button-group-select-instalation button:hover {
   background-color: var(--dark);
