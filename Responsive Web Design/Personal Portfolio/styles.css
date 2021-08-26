@@ -1,0 +1,212 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+    font-size: 87.5%;
+    scroll-behavior: smooth;
+    color: #17150f;
+}
+
+h1,
+h2 {
+    font-weight: 900;
+}
+
+#cover-container {
+    margin-top: 50px;
+}
+#cover-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#welcome-section {
+    height: calc(100vh + 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    width: 90%;
+    z-index: 3;
+    text-align: center;
+    max-width: 800px;
+}
+
+.description p {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    margin-bottom: 8px;
+}
+#himura-img {
+    height: 100%;
+    position: absolute;
+    opacity: 0.3;
+}
+h1 {
+    font-size: 4em;
+    line-height: 0.9em;
+    margin-bottom: 16px;
+}
+.description span {
+    font-weight: 500;
+    color: #da4656;
+}
+nav {
+    height: 50px;
+    background-color: #17150f;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+nav ul {
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+nav ul a {
+    color: #fefefe;
+}
+nav ul li a:hover {
+    color: #da4656;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    scrollbar-color: #da4656 #0d0908;
+}
+
+#projects h2 {
+    align-self: flex-start;
+    font-weight: 900;
+    font-size: 3em;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+}
+#projects h2+p {
+    align-self: flex-start;
+    margin-left: 2rem;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.images-frame {
+    list-style: none;
+    width: min(90vw, 51rem);
+    max-width: 51rem;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 4rem;
+}
+
+.images-frame li {
+    flex: 0 0 45vw;
+    max-width: 21rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 30rem;
+    padding: 0.55em;
+    writing-mode: sideways-lr;
+    text-align: center;
+    color: #FEFEFE;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+
+li:nth-child(2) {
+    left: 4rem;
+}
+li:nth-child(3) {
+    left: 8rem;
+}
+li:nth-child(4) {
+    left: 12rem;
+}
+
+
+
+.images-frame li::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    height: 32rem;
+    width: 100%;
+    background-image: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 83.92%);;
+    z-index: -1;
+}
+
+.images-frame li img {
+  display: block;
+  height: 34rem;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+  z-index: -2;
+}
+  
+
+@media (min-width: 720px) {
+    html {
+        font-size: 100%;
+    }
+    nav ul {
+        gap: 100px;
+    }
+    #cover-container {
+        height: 100vh;
+        margin-top: 0;
+    }
+    #cover-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #welcome-section {
+        display: flex;
+        flex-direction: row;
+    }
+    #himura-img {
+        position: inherit;
+        opacity: 1;
+        height: 70%;
+    }
+    .description {
+        text-align: left;
+        margin-left: 8em;
+    }
+}
