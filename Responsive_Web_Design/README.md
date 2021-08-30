@@ -19,42 +19,42 @@ We also build web pages that respond to different screen sizes, using Flexbox an
 #### :rocket: Projects developed during certification:
     
 
-<p style="display: flex; align-itens: center; justify-content: center">
+<p align="center">
     <b><a href="./Tribute Page">Tribute page</a></b>
 </p>
 
-<p style="display: flex; align-itens: center; justify-content: center">
+<p align="center">
   <img src="../.github/tribute_page.jpg" alt="demonstracao" width="50%" />
 </p>
 
-<p style="display: flex; align-itens: center; justify-content: center">
+<p align="center">
     <b><a href="./Survey Form">Survey Form</a></b>
 </p>
 
-<p style="display: flex; align-itens: center; justify-content: center">
+<p align="center">
   <img src="../.github/survey_form2.jpg" alt="demonstracao" width="50%" />
 </p>
 
-<p style="display: flex; align-itens: center; justify-content: center">
+<p align="center">
     <b><a href="./Technical Documentation Page">Technical Documentation Page</a></b>
 </p>
 
-<p style="display: flex; align-itens: center; justify-content: center">
+<p align="center">
   <img src="../.github/tdp.jpg" alt="demonstracao" width="50%" />
 </p>
 
-<p style="display: flex; align-itens: center; justify-content: center">
+<p align="center">
     <b><a href="./Product Landing Page">Product Landing Page</a></b>
 </p>
 
-<p style="display: flex; align-itens: center; justify-content: center">
+<p align="center">
   <img src="../.github/landing.jpg" alt="demonstracao" width="50%" />
 </p>
 
-<p style="display: flex; align-itens: center; justify-content: center">
+<p align="center">
     <b><a href="./Personal Portfolio">Portfolio Webpage<a></b>
 </p>
 
-<p style="display: flex; align-itens: center; justify-content: center">
+<p align="center">
   <img src="../.github/portfolio.jpg" alt="demonstracao" width="50%" />
 </p>
