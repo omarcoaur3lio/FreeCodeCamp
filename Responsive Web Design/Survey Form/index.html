@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <main id="container">
+        <header>
+            <h1 id="title">Formulário de pesquisa</h1>
+            <p id="description">Nos ajude a melhorar nossa plataforma</p>
+        </header>
+        <form id="survey-form">
+            <fieldset>
+                <label for="name" id="name-label">Nome</label>
+                <input id="name" class="input" type="text" name="nome" placeholder="Digite seu nome" required>
+            </fieldset>
+            <fieldset>
+                <label for="email" id="email-label">Email</label>
+                <input id="email" class="input" class type="email" name="email" placeholder="Digite seu email" required>
+            </fieldset>
+            <fieldset>
+                <label for="number" id="number-label">Idade</label>
+                <input id="number" class="input" type="number" name="age" placeholder="Digite sua idade" min="10"
+                    max="100" required>
+            </fieldset>
+            <fieldset id="dropdown">
+                <label for="drop-select">Qual opção descreve melhor sua função atual?</label>
+                <select name="role" id="drop-select" class="select">
+                    <option disabled selected value>Função atual</option>
+                    <option value="student">Estudante</option>
+                    <option value="engineer">Engenheiro</option>
+                    <option value="doctor">Médico</option>
+                    <option value="teacher">Professor</option>
+                    <option value="other">Outro</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <label>Você recomendaria nosso curso a um amigo?</label>
+                <label>
+                    <input type="radio" name="user-recommend" value="yes" checked> Sim
+                </label>
+                <label>
+                    <input type="radio" name="user-recommend" value="no"> Não
+                </label>
+                <label>
+                    <input type="radio" name="user-recommend" value="maybe"> Talvez
+                </label>
+            </fieldset>
+            <fieldset>
+                <label>Quais tecnologias você gostaria de ver na plataforma?</label>
+                <label>
+                    <input type="checkbox" name="tech" value="react"> React
+                </label>
+                <label>
+                    <input type="checkbox" name="tech" value="react-native"> React Native
+                </label>
+                <label>
+                    <input type="checkbox" name="tech" value="python"> Python
+                </label>
+                <label>
+                    <input type="checkbox" name="tech" value="iot"> IoT
+                </label>
+                <label>
+                    <input type="checkbox" name="tech" value="data-visualization"> Data Visualization
+                </label>
+                <label>
+                    <input type="checkbox" name="tech" value="web-design"> Web Design
+                </label>
+                <label>
+                    <input type="checkbox" name="tech" value="figma"> Figma
+                </label>
+            </fieldset>
+            <fieldset>
+                <label for="comments">Algum comentário ou sugestão?</label>
+                <textarea name="comments" id="comment" placeholder="Deixe seu comentario aqui..."></textarea>
+            </fieldset>
+
+            <button id="submit" type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+
+</html>

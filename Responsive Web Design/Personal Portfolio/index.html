@@ -8,88 +8,99 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 
 <body>
     <nav id="navbar" class="nav">
-        <ul class="nav-list">
-            <li>
-                <a href="#cover-container">Home</a>
-            </li>
-            <li>
-                <a href="#welcome-section">Sobre</a>
-            </li>
-            <li>
-                <a href="#projects">Personagens</a>
-            </li>
-            <li>
-                <a href="#contact">Contato</a>
-            </li>
+        <ul>
+            <li><a href="#cover-container">Home</a></li>
+            <li><a href="#welcome-section">Sobre</a></li>
+            <li><a href="#projects">Personagens</a></li>
+            <li><a href="#contact">Contato</a></li>
         </ul>
     </nav>
 
-    <section id="cover-container">
-        <img src="./assets/cover.png" alt="" srcset="">
-    </section>
+    <main>
+        <section id="cover-container" class="cover-content">
+            <div>
+            </div>
+        </section>
 
+        <section id="welcome-section" class="about-section">
+            <div class="main-description">
+                <div class="description">
+                    <h1>Kenshin Himura</h1>
+                    <p>
+                        Kenshin é um lendário ex-assassino conhecido como em <em>Hitokiri Battōsai</em>.
+                        Kenshin é um espadachim extremamente poderoso, pratica o <em>Hiten Mitsurugi-ryū</em>,
+                        uma antiga arte da espada baseada em <em>Battōjutsu</em>.
+                    </p>
+                    <span>Leia mais ></span>
+                </div>
+                <img id="himura-img" src="./assets/kenshin.png" alt="">
+            </div>
+        </section>
 
-    <section id="welcome-section">
-        <div class="description">
-            <h1>Kenshin Himura</h1>
-            <p>
-                Kenshin é um lendário ex-assassino conhecido como em Hitokiri Battōsai.
-                Kenshin é um espadachim extremamente poderoso, pratica o Hiten Mitsurugi-ryū,
-                uma antiga arte da espada baseada em Battōjutsu.
-            </p>
-            <span>Leia mais ></span>
-        </div>
-        <img id="himura-img" src="./assets/kenshin.png" alt="">
-    </section>
+        <section id="projects" class="charcters-section">
 
-    <section id="projects">
-        <div class="card">
-            <a href="#">
-                <!-- <p class="project-tile">Nome do projeto</p> -->
-                <!-- <img src="#" alt="Imagem do projeto"> -->
-            </a>
-        </div>
+            <div class="hidden">
+                <a href="#"></a>
+            </div>
 
-        <h2>Personagens</h2>
-        <p>Conheça alguns personagens da história.</p>
+            <div class="image-container">
+                <h2>Personagens</h2>
+                <p>Conheça alguns personagens da história.</p>
+                <div>
+                    <ul class="images-frame">
+                        <li>
+                            <img src="./assets/saitou.png" alt="Saitou" />
+                            <p class="project-tile">Hajime Saitou</p>
+                        </li>
+                        <li>
+                            <img src="./assets/soujirou.png" alt="Soujirou" />
+                            <p class="project-tile">Soujirou Seta</p>
+                        </li>
+                        <li>
+                            <img src="./assets/tomoe.png" alt="Tomoe" />
+                            <p class="project-tile">Yukishiro Tomoe</p>
+                        </li>
+                        <li>
+                            <img src="./assets/shishio.png" alt="Shishio" />
+                            <p class="project-tile">Makoto Shishio</p>
+                        </li>
+                        <li>
+                            <img src="./assets/sanosuke.png" alt="Sanosuke" />
+                            <p class="project-tile">Sanosuke Sagara</p>
+                        </li>
 
-        <ul class="images-frame">
-            <li>
-                <img src="./assets/saitou.png" alt="cut citrus fruits. " />
-                <p class="project-tile">Hajime Saitou</p>
-            </li>
-            <li>
-                <img src="./assets/soujirou.png" alt="cut citrus fruits. " />
-                <p class="project-tile">Soujirou Seta</p>
-            </li>
-            <li>
-                <img src="./assets/tomoe.png" alt="cut citrus fruits. " />
-                <p class="project-tile">Yukishiro Tomoe</p>
-            </li>
-            <li>
-                <img src="./assets/shishio.png" alt="cut citrus fruits. " />
-                <p class="project-tile">Makoto Shishio</p>
-            </li>
-            <li>
-                <img src="./assets/sanosuke.png" alt="cut citrus fruits. " />
-                <p class="project-tile">Sanosuke Sagara</p>
-            </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-        
-        </ul>
-
-    </section>
-
-    <footer>
-        <a id="profile-link" href="#" target="_blank">
+    </main>
+    <footer id="contact">
+        <!-- <a id="profile-link" href="#" target="_blank">
             <img src="http://www.github.com/omarcoaur3lio" alt="GitHub">
-        </a>
+        </a> -->
+        <div class="main-footer">
+            <div class="info-container">
+                <h2>Links relacionados</h2>
+                <p>Lista completa de personagens</p>
+                <p>Live Actions</p>
+                <p>Anime e mangá</p>
+                <p>
+                    <i class="fab fa-github"></i>
+                    <a id="profile-link" href="http://www.github.com/omarcoaur3lio" target="_blank">
+                        Entre em contato
+                    </a>
+                </p>
+            </div>
+            <img src="./assets/kenshin-footer.png" alt="">
+        </div>
     </footer>
 
 </body>
