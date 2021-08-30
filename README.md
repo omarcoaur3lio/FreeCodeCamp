@@ -19,7 +19,7 @@ The **`FreeCodeCamp`**  is a programming teaching platform whose mission is:
 
 ####:sparkles: **The certifications offered are:**
 
-- [x] [Responsive Web Design](./Responsive\ Web\ Design/)
+- [x] [Responsive Web Design](./Responsive_Web_Design/)
 - [ ] JavaScript Algorithms and Data Structures
 - [ ] Front End Development Libraries
 - [ ] Data visualization
