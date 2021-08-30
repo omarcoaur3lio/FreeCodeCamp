@@ -17,7 +17,7 @@ The **`FreeCodeCamp`**  is a programming teaching platform whose mission is:
 
 >*To help people learn to program for free. We achieve this by creating thousands of interactive videos, articles and coding lessons - all freely available to the public. We also have thousands of freeCodeCamp study groups around the world.*
 
-####:sparkles: **The certifications offered are:**
+#### :sparkles: **The certifications offered are:**
 
 - [x] [Responsive Web Design](./Responsive_Web_Design/)
 - [ ] JavaScript Algorithms and Data Structures
