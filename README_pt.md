@@ -16,7 +16,7 @@ O **`FreeCodeCamp`** é uma plataforma de ensino de programação que possui com
 
 >*Ajudar as pessoas a aprender a programar gratuitamente. Conseguimos isso criando milhares de vídeos, artigos e lições de codificação interativas - todos disponíveis gratuitamente para o público. Também temos milhares de grupos de estudo freeCodeCamp em todo o mundo.*
 
-####:sparkles: **Os cursos oferecidos são:**
+#### :sparkles: **Os cursos oferecidos são:**
 
 - [x] [Design responsivo para a web](./Responsive\ Web\ Design/)
 - [ ] Algoritmos e estruturas de dados em JavaScript
